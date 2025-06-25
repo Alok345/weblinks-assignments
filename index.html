@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rama Industries - Precision Tools, Perfect Solutions</title>
+    <meta name="description" content="Rama Industries - 16+ years of excellence in CNC Wire Cutting, EDM Sparking, Die Tool Cutting, and precision machining services in Pune, India.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // Immediate scroll to top
+        if (window.scrollY !== 0) {
+            window.scrollTo(0, 0);
+        }
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+    </script>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader">
+            <div class="spinner"></div>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <!-- Topbar -->
+    <div class="topbar">
+        <div class="container">
+            <div class="topbar-content">
+                <div class="contact-info">
+                    <span><i class="fas fa-phone"></i> 9011094773 / 9623980300</span>
+                    <span><i class="fas fa-envelope"></i> rmindustries.wc@gmail.com</span>
+                </div>
+                <div class="topbar-right">
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <button class="quote-btn" onclick="openQuoteModal()">Get A Quote</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <img src="assets/logo.jpg" alt="Rama Industries Logo" width="120" height="60">
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li class="dropdown">
+                        <a href="#services">Products & Services <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#services">CNC Wire Cutting</a></li>
+                            <li><a href="#services">EDM Sparking</a></li>
+                            <li><a href="#services">Die Tool Cutting</a></li>
+                            <li><a href="#services">Press Tool Cutting</a></li>
+                            <li><a href="#services">Sheet Metal Cutting</a></li>
+                            <li><a href="#services">Laser Cutting</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#clients">Clients</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+                <div class="hamburger" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Slider -->
+    <section id="home" class="hero-slider">
+        <div class="slider-container">
+            <div class="slide active" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://www.goodwin.edu/enews/wp-content/uploads/2024/07/homa-appliances-_XDK4naBbgw-unsplash-1920x768.jpg');">
+                <div class="slide-content">
+                    <h1>Precision CNC Wire Cutting Services</h1>
+                    <p>16+ years of excellence in precision machining and tool cutting solutions</p>
+                    <button class="cta-btn" onclick="scrollToSection('about')">Learn More</button>
+                </div>
+            </div>
+            <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://www.violintec.com/wp-content/uploads/2024/02/CNC-Milling-scaled.jpg');">
+                <div class="slide-content">
+                    <h1>Advanced EDM Technology</h1>
+                    <p>State-of-the-art EDM wire cutting and sparking machines for superior results</p>
+                    <button class="cta-btn" onclick="scrollToSection('services')">Our Services</button>
+                </div>
+            </div>
+            <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://www.millscnc.co.uk/wp-content/uploads/2022/04/DNM-at-Arrowsmith-scaled-2-875x625.jpg');">
+                <div class="slide-content">
+                    <h1>Custom Tool Design & Manufacturing</h1>
+                    <p>Innovative solutions for die tools, press tools, and jig fixtures</p>
+                    <button class="cta-btn" onclick="scrollToSection('contact')">Contact Us</button>
+                </div>
+            </div>
+        </div>
+        <div class="slider-nav">
+            <button class="prev" onclick="changeSlide(-1)" aria-label="Previous slide"><i class="fas fa-chevron-left"></i></button>
+            <button class="next" onclick="changeSlide(1)" aria-label="Next slide"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="slider-dots">
+            <span class="dot active" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjQton159gdxmuQ7Dc_Kff9Mesagbac3Etug&s" alt="CNC Machine" loading="lazy">
+                </div>
+                <div class="about-text">
+                    <h2>About Rama Industries</h2>
+                    <p>RAMA INDUSTRIES has been working in CNC EDM WIRE-CUTTING for over 16 years. We provide the best services and quality job works with our experienced staff and skilled workers.</p>
+                    <p>We specialize in DIE TOOL CUTTING, PRESS TOOL CUTTING, SHEET METAL CUTTING, and JIG FIXTURE cutting as per customer requirements. Our team can provide innovative ideas and best solutions for new development projects.</p>
+                    <p>We have developed our own Tool Design capabilities and strive to provide all services in one place, saving our customers' valuable time.</p>
+                    <ul class="about-features">
+                        <li><i class="fas fa-check"></i> 16+ Years of Experience</li>
+                        <li><i class="fas fa-check"></i> Skilled & Experienced Staff</li>
+                        <li><i class="fas fa-check"></i> Custom Tool Design</li>
+                        <li><i class="fas fa-check"></i> Quality Assurance</li>
+                    </ul>
+                    <button class="read-more-btn" onclick="openQuoteModal()">Read More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products & Services -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2 class="section-title">Our Products & Services</h2>
+            <div class="services-slider-container">
+                <div class="services-slider">
+                    <div class="service-card active">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMrrm1DO0VWBqCgv0f676wRqsf846PeSrz1g&s" alt="CNC Wire Cutting" loading="lazy">
+                        <h3>CNC Wire Cutting</h3>
+                        <p>Precision wire cutting with Sprincut Win machines featuring 0.25mm wire diameter and ±30° taper capability.</p>
+                        <button class="service-btn" onclick="openQuoteModal()">Read More</button>
+                    </div>
+                    <div class="service-card">
+                        <img src="https://images.squarespace-cdn.com/content/v1/6435767e98f48d5f4978208e/39e82c57-f147-49d3-893f-0c8819136b9d/STRATOS+SERIES+CNC+Machine.JPG" alt="EDM Sparking" loading="lazy">
+                        <h3>EDM Sparking</h3>
+                        <p>Fine Sodick X EDM sparking machine with 200x300mm work table and specialized EDM tapping in hardened jobs.</p>
+                        <button class="service-btn" onclick="openQuoteModal()">Read More</button>
+                    </div>
+                    <div class="service-card">
+                        <img src="https://leadrp.net/wp-content/uploads/2022/03/common-types-of-CNC-machine-900x600.jpg" alt="Die Tool Cutting" loading="lazy">
+                        <h3>Die Tool Cutting</h3>
+                        <p>Precision die tool cutting services for various industrial applications with superior finish quality.</p>
+                        <button class="service-btn" onclick="openQuoteModal()">Read More</button>
+                    </div>
+                    <div class="service-card">
+                        <img src="https://7837329.fs1.hubspotusercontent-na1.net/hubfs/7837329/Closeup%20of%20CNC%20machine%20with%20sparks-1.jpg" alt="Press Tool Cutting" loading="lazy">
+                        <h3>Press Tool Cutting</h3>
+                        <p>High-quality press tool cutting and manufacturing services for automotive and industrial sectors.</p>
+                        <button class="service-btn" onclick="openQuoteModal()">Read More</button>
+                    </div>
+                    <div class="service-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQP8Ou85YlMAmh6tGzNrh3ivAnp-xBkTU7inw&s" alt="Laser Cutting" loading="lazy">
+                        <h3>Laser Cutting Service</h3>
+                        <p>Advanced laser cutting services for precise material processing and custom fabrication needs.</p>
+                        <button class="service-btn" onclick="openQuoteModal()">Read More</button>
+                    </div>
+                </div>
+                <div class="service-nav">
+                    <button class="service-prev" onclick="changeService(-1)" aria-label="Previous service"><i class="fas fa-chevron-left"></i></button>
+                    <button class="service-next" onclick="changeService(1)" aria-label="Next service"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <h2 class="section-title">Our Work Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" onclick="openImageModal('/placeholder.svg?height=600&width=800')">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMrrm1DO0VWBqCgv0f676wRqsf846PeSrz1g&s" alt="CNC Work 1" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openImageModal('/placeholder.svg?height=600&width=800')">
+                    <img src="https://7837329.fs1.hubspotusercontent-na1.net/hubfs/7837329/Closeup%20of%20CNC%20machine%20with%20sparks-1.jpg" alt="CNC Work 2" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openImageModal('/placeholder.svg?height=600&width=800')">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2LnrDtUMeCJmBnmYBM6P3YTVtGki-rXY30w&s" alt="CNC Work 3" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openImageModal('/placeholder.svg?height=600&width=800')">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdcu9aODBUZX5MPZlx6IMADEgL3ZQ5vJm6mA&s" alt="CNC Work 4" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openImageModal('/placeholder.svg?height=600&width=800')">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQP8Ou85YlMAmh6tGzNrh3ivAnp-xBkTU7inw&s" alt="CNC Work 5" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients -->
+    <section id="clients" class="clients-section">
+        <div class="container">
+            <h2 class="section-title">Our Valuable Clients</h2>
+            <div class="clients-slider-wrapper">
+                <div class="clients-slider">
+                    <div class="client-logo">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3KxF4qfc4446UTrsEriCx9ygJeOIjDpKD7w&s" alt="Ultra Corpotech India" loading="lazy">
+                    </div>
+                    <div class="client-logo">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf5w1dqmIQoH_As0MF0o_7cfN8O0uAISoujg&s" alt="Autocomp Panse Group" loading="lazy">
+                    </div>
+                    <div class="client-logo">
+                        <img src="https://etimg.etb2bimg.com/photo/66510150.cms" alt="Minda Industries" loading="lazy">
+                    </div>
+                    <div class="client-logo">
+                        <img src="https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/2f1e66c7aed00fe0a02cd1db80fb60f5" alt="Onkar Dies" loading="lazy">
+                    </div>
+                    <div class="client-logo">
+                        <img src="https://media.licdn.com/dms/image/v2/C4E0BAQFlNypvz5zQ_w/company-logo_200_200/company-logo_200_200/0/1630621391639/alpha_dies_and_pattern_logo?e=2147483647&v=beta&t=W6OZoJCJ0-TlZGz-DDlEjC2oUrbcklT_bR5NI4sR6cU" alt="Alfa Dies & Pattern" loading="lazy">
+                    </div>
+                    <div class="client-logo">
+                        <img src="https://www.sme.in/kumartools/assets/images/logo.png" alt="Kumar Tools" loading="lazy">
+                    </div>
+                    <div class="client-logo">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQp7LkSziU0AoMMtnhFBNhGmf9pFjkWpgB0VA&s" alt="Freudenberg" loading="lazy">
+                    </div>
+                    <!-- Duplicate for continuous scroll -->
+                    <div class="client-logo">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3KxF4qfc4446UTrsEriCx9ygJeOIjDpKD7w&s" alt="Ultra Corpotech India" loading="lazy">
+                    </div>
+                    <div class="client-logo">
+                        <img src="https://pansegroup.co.in/wp-content/uploads/2023/05/Panse-logo.png" alt="Autocomp Panse Group" loading="lazy">
+                    </div>
+                    <div class="client-logo">
+                        <img src="https://www.autoguideindia.com/wp-content/uploads/2022/07/UNO-MINDA-LTD-696x674.webp" alt="Minda Industries" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li>CNC Wire Cutting</li>
+                        <li>EDM Sparking</li>
+                        <li>Die Tool Cutting</li>
+                        <li>Press Tool Cutting</li>
+                        <li>Sheet Metal Cutting</li>
+                        <li>Laser Cutting Service</li>
+                        <li>VMC Service</li>
+                        <li>CMM & Scanning Service</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Unit no.-B-39, Rajgurunagar Industrial Co.Op.Soc. Ltd.,<br>
+                        T-106/2, MIDC, Bhosari, Pune-411026</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <p>9011094773 / 9623980300</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>rmindustries.wc@gmail.com</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Location Map</h3>
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.1234567890!2d73.8567890!3d18.6234567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sBhosari%2C%20Pune!5e0!3m2!1sen!2sin!4v1234567890"
+                            width="100%" 
+                            height="200" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy"
+                            title="Rama Industries Location">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Rama Industries. All rights reserved. | Precision Tools, Perfect Solutions.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Quote Modal -->
+    <div id="quoteModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeQuoteModal()">&times;</span>
+            <h2>Get A Quote</h2>
+            <form class="quote-form" onsubmit="submitQuoteForm(event)">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <input type="tel" placeholder="Phone Number" required>
+                <select required>
+                    <option value="">Select Service</option>
+                    <option value="cnc-wire">CNC Wire Cutting</option>
+                    <option value="edm-spark">EDM Sparking</option>
+                    <option value="die-tool">Die Tool Cutting</option>
+                    <option value="press-tool">Press Tool Cutting</option>
+                    <option value="laser">Laser Cutting</option>
+                </select>
+                <textarea placeholder="Project Details" rows="4"></textarea>
+                <button type="submit">Submit Quote Request</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content image-modal">
+            <span class="close" onclick="closeImageModal()">&times;</span>
+            <img id="modalImage" src="/placeholder.svg" alt="Gallery Image">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
