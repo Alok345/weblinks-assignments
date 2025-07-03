@@ -193,6 +193,7 @@
     <section id="gallery" class="gallery-section">
         <div class="container">
             <h2 class="section-title">Our Work Gallery</h2>
+            
             <div class="gallery-grid">
                 <div class="gallery-item" onclick="openImageModal('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMrrm1DO0VWBqCgv0f676wRqsf846PeSrz1g&s')">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMrrm1DO0VWBqCgv0f676wRqsf846PeSrz1g&s" alt="CNC Work 1" loading="lazy">
@@ -348,12 +349,18 @@
     </div>
 
     
-    <div id="imageModal" class="modal">
+    <!-- <div id="imageModal" class="modal">
         <div class="modal-content image-modal">
             <span class="close" onclick="closeImageModal()">&times;</span>
             <img id="modalImage" src="/placeholder.svg" alt="Gallery Image">
         </div>
-    </div>
+    </div> -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content image-modal" style="display: flex;justify-content: center;">
+            <span class="close" onclick="closeImageModal()">&times;</span>
+            <img id="modalImage" src="/placeholder.svg" alt="Gallery Image" style="max-width: 100%; margin-top: -80px;">
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

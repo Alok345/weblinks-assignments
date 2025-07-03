@@ -518,6 +518,13 @@ body {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 20px;
+  background-image: url('https://www.improprecision.com/wp-content/uploads/2021/05/Vertical-Machining-Center.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  padding: 40px;
+  border-radius: 10px;
 }
 
 .gallery-item {
@@ -592,7 +599,7 @@ body {
   max-height: 80px;
   max-width: 150px;
   object-fit: contain;
-  filter: grayscale(100%);
+  /* filter: grayscale(100%); */
   transition: filter 0.3s;
 }
 
